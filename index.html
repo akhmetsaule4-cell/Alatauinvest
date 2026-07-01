@@ -7,48 +7,25 @@
     
     <meta name="description" content="Инвестиционный проект по производству подгузников для взрослых в СЭЗ «Alatau». Команда экспертов. Готовность 100%." />
     
-    <!-- Google Analytics (ЗАМЕНИТЕ G-XXXXXXXXXX НА ВАШ ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- ===== GOOGLE ANALYTICS (ВАШ ID) ===== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS4ZJE68XG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-HS4ZJE68XG');
+        console.log('✅ Google Analytics загружен! ID: G-HS4ZJE68XG');
     </script>
-    
-    <!-- Yandex Metrika (ЗАМЕНИТЕ XXXXXXXX НА ВАШ ID) -->
-    <script>
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0];
-        k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-        ym(XXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f4f7fc;
-            color: #0b1a33;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7fc; color: #0b1a33; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
         
         .confidential-ribbon {
             background: #1a2a4a;
@@ -65,7 +42,7 @@
         .hero {
             background: linear-gradient(135deg, #0b1a33 0%, #1a3a5c 100%);
             color: #fff;
-            padding: 30px 0 30px;
+            padding: 40px 0 35px;
             position: relative;
             overflow: hidden;
         }
@@ -74,149 +51,102 @@
             position: absolute;
             top: -50%;
             right: -20%;
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             background: rgba(251, 191, 36, 0.04);
             border-radius: 50%;
             pointer-events: none;
         }
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
+        .hero .container { position: relative; z-index: 1; }
+        
         .hero-badge {
             display: inline-block;
             background: rgba(251, 191, 36, 0.15);
             border: 1px solid #fbbf24;
             color: #fbbf24;
-            padding: 3px 12px;
+            padding: 4px 16px;
             border-radius: 20px;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
+        
         .hero h1 {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
-        .hero h1 span {
-            color: #fbbf24;
-        }
-        .hero p {
-            font-size: 0.95rem;
+        .hero h1 span { color: #fbbf24; }
+        
+        .hero-description {
+            font-size: 1.05rem;
             color: #cbd5e1;
-            max-width: 100%;
-            margin-bottom: 14px;
+            max-width: 700px;
+            margin-bottom: 20px;
+            line-height: 1.7;
         }
+        .hero-description strong { color: #fbbf24; }
         
         .hero-features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 16px 0 14px;
+            gap: 12px;
+            margin: 20px 0 18px;
         }
         .hero-feature {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 10px;
-            padding: 10px 8px;
+            padding: 12px 10px;
             text-align: center;
         }
-        .hero-feature .icon {
-            font-size: 1.4rem;
-            display: block;
-        }
-        .hero-feature .number {
-            font-size: 1rem;
-            font-weight: 800;
-            color: #fbbf24;
-            display: block;
-        }
-        .hero-feature .label {
-            font-size: 0.6rem;
-            color: #94a3b8;
-            display: block;
-        }
-        .hero-feature .highlight-label {
-            color: #fbbf24;
-            font-weight: 600;
-            font-size: 0.6rem;
-            display: block;
-        }
+        .hero-feature .icon { font-size: 1.6rem; display: block; }
+        .hero-feature .number { font-size: 1.1rem; font-weight: 800; color: #fbbf24; display: block; }
+        .hero-feature .label { font-size: 0.65rem; color: #94a3b8; display: block; }
+        .hero-feature .highlight-label { color: #fbbf24; font-weight: 600; font-size: 0.65rem; display: block; }
         
         .hero-stats {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin: 12px 0 14px;
+            gap: 16px;
+            margin: 14px 0 16px;
         }
-        .hero-stats .stat {
-            display: flex;
-            flex-direction: column;
-        }
-        .hero-stats .stat .number {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #fbbf24;
-        }
-        .hero-stats .stat .label {
-            font-size: 0.65rem;
-            color: #94a3b8;
-        }
+        .hero-stats .stat { display: flex; flex-direction: column; }
+        .hero-stats .stat .number { font-size: 1.4rem; font-weight: 700; color: #fbbf24; }
+        .hero-stats .stat .label { font-size: 0.7rem; color: #94a3b8; }
         
         .btn-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 6px;
+            gap: 10px;
+            margin-top: 8px;
         }
         .btn {
             display: inline-block;
-            padding: 8px 18px;
+            padding: 10px 24px;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
             border: none;
         }
-        .btn-primary {
-            background: #fbbf24;
-            color: #0b1a33;
-        }
-        .btn-primary:hover {
-            background: #f59e0b;
-        }
-        .btn-secondary {
-            background: transparent;
-            color: #fff;
-            border: 2px solid rgba(255, 255, 255, 0.25);
-        }
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
-        }
-        .btn-pdf {
-            background: #dc2626;
-            color: #fff;
-        }
-        .btn-pdf:hover {
-            background: #b91c1c;
-        }
-        .btn-whatsapp {
-            background: #25D366;
-            color: #fff;
-        }
-        .btn-whatsapp:hover {
-            background: #1da851;
-        }
+        .btn-primary { background: #fbbf24; color: #0b1a33; }
+        .btn-primary:hover { background: #f59e0b; transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.25); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.08); }
+        .btn-pdf { background: #dc2626; color: #fff; }
+        .btn-pdf:hover { background: #b91c1c; transform: translateY(-2px); }
+        .btn-whatsapp { background: #25D366; color: #fff; }
+        .btn-whatsapp:hover { background: #1da851; transform: translateY(-2px); }
         
         .lang-switch {
             display: flex;
             gap: 6px;
-            margin-top: 10px;
+            margin-top: 14px;
             flex-wrap: wrap;
         }
         .lang-switch a {
@@ -225,7 +155,7 @@
             padding: 2px 10px;
             border-radius: 4px;
             border: 1px solid #1e293b;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             transition: all 0.3s;
             cursor: pointer;
         }
@@ -239,7 +169,7 @@
         .tabs-container {
             background: #fff;
             border-radius: 16px 16px 0 0;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.04);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -253,9 +183,7 @@
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
         }
-        .tabs::-webkit-scrollbar {
-            display: none;
-        }
+        .tabs::-webkit-scrollbar { display: none; }
         .tab-btn {
             flex: 0 0 auto;
             padding: 10px 14px;
@@ -270,127 +198,59 @@
             white-space: nowrap;
             font-family: inherit;
         }
-        .tab-btn:hover {
-            color: #0b1a33;
-        }
+        .tab-btn:hover { color: #0b1a33; }
         .tab-btn.active {
             color: #0b1a33;
             border-bottom-color: #fbbf24;
             background: rgba(251, 191, 36, 0.06);
         }
-        .tab-btn .icon {
-            margin-right: 4px;
-        }
+        .tab-btn .icon { margin-right: 4px; }
         
         .tab-content {
             display: none;
             animation: fadeIn 0.3s ease;
             padding: 16px 0 30px;
         }
-        .tab-content.active {
-            display: block;
-        }
+        .tab-content.active { display: block; }
         @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(6px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(6px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
         
-        section {
-            padding: 20px 0;
-        }
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #0b1a33;
-        }
-        .section-subtitle {
-            color: #64748b;
-            font-size: 0.9rem;
-            margin-bottom: 18px;
-        }
-        .section-title .highlight {
-            color: #d97706;
-        }
+        section { padding: 20px 0; }
+        .section-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; color: #0b1a33; }
+        .section-subtitle { color: #64748b; font-size: 0.9rem; margin-bottom: 18px; }
+        .section-title .highlight { color: #d97706; }
         
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-        .grid-3 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
+        .grid-2 { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         
         @media (min-width: 640px) {
-            .grid-2 {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .grid-3 {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero-features {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .tab-btn {
-                font-size: 0.8rem;
-                padding: 12px 20px;
-            }
-            .tabs {
-                gap: 4px;
-            }
+            .grid-2 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+            .hero h1 { font-size: 2.6rem; }
+            .hero-features { grid-template-columns: repeat(3, 1fr); }
+            .tab-btn { font-size: 0.8rem; padding: 12px 20px; }
+            .tabs { gap: 4px; }
         }
         @media (min-width: 1024px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            .hero p {
-                font-size: 1.1rem;
-                max-width: 650px;
-            }
-            .tab-btn {
-                font-size: 0.9rem;
-                padding: 14px 28px;
-            }
+            .hero h1 { font-size: 3rem; }
+            .hero-description { font-size: 1.15rem; max-width: 700px; }
+            .tab-btn { font-size: 0.9rem; padding: 14px 28px; }
         }
         
         .card {
             background: #fff;
             border-radius: 12px;
             padding: 18px 16px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
             border: 1px solid #e9edf2;
             transition: all 0.3s ease;
         }
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-        }
-        .card .icon {
-            font-size: 1.6rem;
-            margin-bottom: 6px;
-            display: block;
-        }
-        .card h3 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-        .card p {
-            color: #475569;
-            font-size: 0.85rem;
-        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
+        .card .icon { font-size: 1.6rem; margin-bottom: 6px; display: block; }
+        .card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+        .card p { color: #475569; font-size: 0.85rem; }
         .card .badge {
             display: inline-block;
             background: #dcfce7;
@@ -401,23 +261,11 @@
             border-radius: 12px;
             margin-top: 4px;
         }
-        .card .badge-warning {
-            background: #fef3c7;
-            color: #92400e;
-        }
-        .card .badge-gold {
-            background: #fbbf24;
-            color: #0b1a33;
-        }
-        .card.border-gold {
-            border-left: 3px solid #fbbf24;
-        }
-        .card.border-blue {
-            border-left: 3px solid #2563eb;
-        }
-        .card.border-green {
-            border-left: 3px solid #16a34a;
-        }
+        .card .badge-warning { background: #fef3c7; color: #92400e; }
+        .card .badge-gold { background: #fbbf24; color: #0b1a33; }
+        .card.border-gold { border-left: 3px solid #fbbf24; }
+        .card.border-blue { border-left: 3px solid #2563eb; }
+        .card.border-green { border-left: 3px solid #16a34a; }
         
         .team-card {
             background: #fff;
@@ -426,10 +274,7 @@
             border: 1px solid #e9edf2;
             transition: all 0.3s ease;
         }
-        .team-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-        }
+        .team-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
         .team-card .avatar {
             width: 56px;
             height: 56px;
@@ -442,21 +287,9 @@
             color: #fbbf24;
             margin-bottom: 8px;
         }
-        .team-card h4 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: #0b1a33;
-        }
-        .team-card .role {
-            color: #d97706;
-            font-weight: 600;
-            font-size: 0.75rem;
-        }
-        .team-card p {
-            color: #475569;
-            font-size: 0.8rem;
-            margin-top: 4px;
-        }
+        .team-card h4 { font-size: 0.95rem; font-weight: 700; color: #0b1a33; }
+        .team-card .role { color: #d97706; font-weight: 600; font-size: 0.75rem; }
+        .team-card p { color: #475569; font-size: 0.8rem; margin-top: 4px; }
         .team-card .badge-ready {
             display: inline-block;
             background: #dcfce7;
@@ -475,9 +308,7 @@
             margin: 12px 0;
         }
         @media (min-width: 640px) {
-            .sap-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .sap-container { grid-template-columns: repeat(3, 1fr); }
         }
         .sap-card {
             background: #fff;
@@ -486,18 +317,8 @@
             border: 2px solid #e9edf2;
             text-align: center;
         }
-        .sap-card.best {
-            border-color: #fbbf24;
-            background: #fefcf0;
-        }
-        .sap-card .diagram {
-            height: 140px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 6px 0;
-        }
+        .sap-card.best { border-color: #fbbf24; background: #fefcf0; }
+        .sap-card .diagram { height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 6px 0; }
         .sap-card .diagram .layer {
             width: 100%;
             border-radius: 6px;
@@ -506,15 +327,8 @@
             font-size: 0.5rem;
             font-weight: 600;
         }
-        .sap-card .title {
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin: 4px 0;
-        }
-        .sap-card .desc {
-            font-size: 0.75rem;
-            color: #475569;
-        }
+        .sap-card .title { font-weight: 700; font-size: 0.85rem; margin: 4px 0; }
+        .sap-card .desc { font-size: 0.75rem; color: #475569; }
         .sap-card .badge-sap {
             display: inline-block;
             padding: 2px 12px;
@@ -523,18 +337,9 @@
             font-weight: 700;
             margin-top: 6px;
         }
-        .badge-bad {
-            background: #fee2e2;
-            color: #991b1b;
-        }
-        .badge-medium {
-            background: #fef3c7;
-            color: #92400e;
-        }
-        .badge-good {
-            background: #dcfce7;
-            color: #166534;
-        }
+        .badge-bad { background: #fee2e2; color: #991b1b; }
+        .badge-medium { background: #fef3c7; color: #92400e; }
+        .badge-good { background: #dcfce7; color: #166534; }
         
         #map {
             height: 280px;
@@ -543,16 +348,8 @@
             border: 2px solid #e9edf2;
             margin: 10px 0;
         }
-        @media (min-width: 640px) {
-            #map {
-                height: 350px;
-            }
-        }
-        @media (min-width: 1024px) {
-            #map {
-                height: 400px;
-            }
-        }
+        @media (min-width: 640px) { #map { height: 350px; } }
+        @media (min-width: 1024px) { #map { height: 400px; } }
         .map-container {
             background: #fff;
             border-radius: 12px;
@@ -567,26 +364,14 @@
             border: 1px solid #e9edf2;
             max-width: 100%;
             margin: 0 auto;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
         }
         @media (min-width: 640px) {
-            .form-box {
-                padding: 32px;
-                max-width: 560px;
-            }
+            .form-box { padding: 32px; max-width: 560px; }
         }
-        .form-box h3 {
-            font-size: 1.2rem;
-            margin-bottom: 4px;
-        }
-        .form-box p {
-            color: #64748b;
-            margin-bottom: 16px;
-            font-size: 0.85rem;
-        }
-        .form-group {
-            margin-bottom: 12px;
-        }
+        .form-box h3 { font-size: 1.2rem; margin-bottom: 4px; }
+        .form-box p { color: #64748b; margin-bottom: 16px; font-size: 0.85rem; }
+        .form-group { margin-bottom: 12px; }
         .form-group label {
             display: block;
             font-weight: 600;
@@ -594,8 +379,7 @@
             margin-bottom: 3px;
             color: #1e293b;
         }
-        .form-group input,
-        .form-group textarea {
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 8px 12px;
             border: 1px solid #d1d5db;
@@ -604,15 +388,11 @@
             transition: border 0.3s;
             font-family: inherit;
         }
-        .form-group textarea {
-            min-height: 70px;
-            resize: vertical;
-        }
-        .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group textarea { min-height: 70px; resize: vertical; }
+        .form-group input:focus, .form-group textarea:focus {
             outline: none;
             border-color: #fbbf24;
-            box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.15);
+            box-shadow: 0 0 0 3px rgba(251,191,36,0.15);
         }
         .form-group .checkbox {
             display: flex;
@@ -621,9 +401,7 @@
             font-size: 0.8rem;
             color: #475569;
         }
-        .form-group .checkbox input {
-            width: auto;
-        }
+        .form-group .checkbox input { width: auto; }
         .btn-submit {
             width: 100%;
             padding: 12px;
@@ -640,9 +418,7 @@
             justify-content: center;
             gap: 8px;
         }
-        .btn-submit:hover {
-            background: #1da851;
-        }
+        .btn-submit:hover { background: #1da851; }
         
         .toast {
             position: fixed;
@@ -654,7 +430,7 @@
             padding: 12px 18px;
             border-radius: 12px;
             font-weight: 600;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
             z-index: 9999;
             transform: translateY(-120%);
             transition: transform 0.4s ease;
@@ -664,22 +440,11 @@
             margin: 0 auto;
         }
         @media (min-width: 640px) {
-            .toast {
-                left: auto;
-                right: 20px;
-                top: 20px;
-                transform: translateX(120%);
-            }
-            .toast.show {
-                transform: translateX(0);
-            }
+            .toast { left: auto; right: 20px; top: 20px; transform: translateX(120%); }
+            .toast.show { transform: translateX(0); }
         }
-        .toast.show {
-            transform: translateY(0);
-        }
-        .toast.error {
-            background: #dc2626;
-        }
+        .toast.show { transform: translateY(0); }
+        .toast.error { background: #dc2626; }
         
         .footer {
             background: #0b1a33;
@@ -694,28 +459,15 @@
             justify-content: space-between;
             gap: 12px;
         }
-        .footer .col {
-            max-width: 100%;
-        }
-        @media (min-width: 640px) {
-            .footer .col {
-                max-width: 280px;
-            }
-        }
-        .footer .col h4 {
-            color: #fff;
-            font-size: 0.8rem;
-            margin-bottom: 4px;
-        }
-        .footer .col p,
-        .footer .col a {
+        .footer .col { max-width: 100%; }
+        @media (min-width: 640px) { .footer .col { max-width: 280px; } }
+        .footer .col h4 { color: #fff; font-size: 0.8rem; margin-bottom: 4px; }
+        .footer .col p, .footer .col a {
             font-size: 0.7rem;
             color: #94a3b8;
             text-decoration: none;
         }
-        .footer .col a:hover {
-            color: #fbbf24;
-        }
+        .footer .col a:hover { color: #fbbf24; }
         .footer .copyright {
             width: 100%;
             text-align: center;
@@ -733,20 +485,10 @@
             font-size: 10px;
             line-height: 1.5;
         }
-        #pdfContent h1 {
-            font-size: 18px;
-        }
-        #pdfContent h2 {
-            font-size: 14px;
-            margin-top: 12px;
-        }
-        #pdfContent table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 9px;
-        }
-        #pdfContent table th,
-        #pdfContent table td {
+        #pdfContent h1 { font-size: 18px; }
+        #pdfContent h2 { font-size: 14px; margin-top: 12px; }
+        #pdfContent table { width: 100%; border-collapse: collapse; font-size: 9px; }
+        #pdfContent table th, #pdfContent table td {
             border: 1px solid #000;
             padding: 3px 6px;
             text-align: left;
@@ -760,32 +502,18 @@
             text-align: center;
             margin-top: 12px;
         }
-        .ready-big p {
-            font-size: 0.95rem;
-            margin: 0;
-            color: #fff;
-        }
-        .ready-big strong {
-            color: #fbbf24;
-        }
+        .ready-big p { font-size: 0.95rem; margin: 0; color: #fff; }
+        .ready-big strong { color: #fbbf24; }
         
-        .team-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-        @media (min-width: 640px) {
-            .team-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+        .team-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 640px) { .team-grid { grid-template-columns: 1fr 1fr; } }
     </style>
 </head>
 <body>
 
     <div class="confidential-ribbon" id="ribbon">🔒 Конфиденциально — только для инвесторов</div>
 
-    <!-- HERO -->
+    <!-- ===== HERO ===== -->
     <header class="hero">
         <div class="container">
             <div class="hero-badge" id="heroBadge">📋 Заявка на статус резидента СЭЗ «Alatau» подана</div>
@@ -793,9 +521,15 @@
                 Производство подгузников <br />
                 для взрослых <span>в СЭЗ «Alatau»</span>
             </h1>
-            <p id="heroDesc">
-                Импортозамещение с государственной поддержкой. <br />
-                Команда экспертов с 17+ лет опыта. <strong style="color:#fbbf24;">ГОТОВНОСТЬ 100%</strong>
+            <p class="hero-description" id="heroDesc">
+                <strong>Первый в Казахстане</strong> производитель подгузников для взрослых с полным циклом контроля качества.
+                Проект решает задачу <strong>импортозамещения</strong> в сегменте медицинских изделий для ухода за лежачими пациентами.
+                <br /><br />
+                Казахстан <strong>импортирует 100%</strong> подобной продукции — внутреннего производства нет.
+                Мы создаем производство на территории <strong>СЭЗ «Alatau»</strong> с налоговыми преференциями 0%.
+                <br /><br />
+                Команда — <strong>эксперты с 17+ лет</strong> опыта в фармацевтике и GMP-производстве.
+                <strong style="color:#fbbf24;">Готовность 100% к запуску.</strong>
             </p>
 
             <div class="hero-features">
@@ -830,7 +564,7 @@
                 <a href="#contact-tab" class="btn btn-primary" id="btnMaterials">📄 Получить материалы</a>
                 <button onclick="generatePDF()" class="btn btn-pdf" id="btnPdf">📥 PDF</button>
                 <a href="#team-tab" class="btn btn-secondary" id="btnTeam">👥 Команда</a>
-                <a href="#contact-tab" class="btn btn-whatsapp" id="btnWhatsAppHeader">💬 WhatsApp</a>
+                <button onclick="openWhatsApp()" class="btn btn-whatsapp" id="btnWhatsAppHeader">💬 WhatsApp</button>
             </div>
 
             <div class="lang-switch">
@@ -841,7 +575,7 @@
         </div>
     </header>
 
-    <!-- ВКЛАДКИ -->
+    <!-- ===== ВКЛАДКИ ===== -->
     <div class="tabs-container">
         <div class="container">
             <div class="tabs" id="tabHeaders">
@@ -857,7 +591,7 @@
         </div>
     </div>
 
-    <!-- СОДЕРЖИМОЕ ВКЛАДОК -->
+    <!-- ===== СОДЕРЖИМОЕ ВКЛАДОК ===== -->
     <div class="container">
 
         <!-- TAB 1: КОМАНДА -->
@@ -1033,7 +767,7 @@
             </section>
         </div>
 
-        <!-- TAB 5: ВОЗВРАТ -->
+        <!-- TAB 5: ВОЗВРАТ ИНВЕСТИЦИЙ -->
         <div class="tab-content" id="return-tab">
             <section>
                 <h2 class="section-title" id="returnTitle">💰 Возврат инвестиций — <span class="highlight">QazIndustry</span></h2>
@@ -1153,7 +887,7 @@
 
     </div>
 
-    <!-- FOOTER -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="col">
@@ -1179,6 +913,7 @@
 
     <div id="toast" class="toast">✅ Сообщение отправлено!</div>
 
+    <!-- ===== PDF КОНТЕНТ ===== -->
     <div id="pdfContent">
         <h1>Инвестиционный меморандум</h1>
         <h2>Производство подгузников для взрослых</h2>
@@ -1199,488 +934,25 @@
         <p><strong>Ахмет Сауле</strong> — руководитель, 17+ лет</p>
         <p><strong>Субботин Александр</strong> — гл. инженер, 25+ лет</p>
         <p>Специалисты по качеству, стандартизации, SAP.</p>
+        <h2>Государственная поддержка</h2>
+        <p>QazIndustry: возмещение до 40% затрат на оборудование (до 60 млн тг/год). Постфинансирование.</p>
+        <h2>Статус ОИ</h2>
+        <p>60% сотрудников с инвалидностью 2-3 группы. Освобождение от КПН, НДС, соцналога.</p>
     </div>
 
     <script>
         // ==========================================
-        // ПЕРЕВОДЫ НА 3 ЯЗЫКА (СОКРАЩЕННАЯ ВЕРСИЯ)
+        // WHATSAPP (ГЛАВНАЯ КНОПКА)
         // ==========================================
-        const translations = {
-            ru: {
-                ribbon: '🔒 Конфиденциально — только для инвесторов',
-                heroBadge: '📋 Заявка на статус резидента СЭЗ «Alatau» подана',
-                heroTitle: 'Производство подгузников <br /> для взрослых <span>в СЭЗ «Alatau»</span>',
-                heroDesc: 'Импортозамещение с государственной поддержкой. <br /> Команда экспертов с 17+ лет опыта. <strong style="color:#fbbf24;">ГОТОВНОСТЬ 100%</strong>',
-                f1Title: 'СЭЗ',
-                f1Sub: 'КПН 0% · НДС 0%',
-                f1Label: '10 лет льгот',
-                f2Title: '60%',
-                f2Sub: 'ИНВАЛИДЫ',
-                f2Label: '2-3 группы',
-                f3Title: 'ДО 40%',
-                f3Sub: 'ВОЗВРАТ',
-                f3Label: 'QazIndustry',
-                stat1: 'IRR',
-                stat2: 'мес. окупаемость',
-                stat3: 'млрд тг CAPEX',
-                stat4: 'млн шт/мес',
-                btnMaterials: '📄 Получить материалы',
-                btnPdf: '📥 PDF',
-                btnTeam: '👥 Команда',
-                btnWhatsAppHeader: '💬 WhatsApp',
-                teamTitle: '👥 Команда <span class="highlight">проекта</span>',
-                teamDesc: 'Сильнейшие специалисты РК. <strong style="color:#16a34a;">100% готовность!</strong>',
-                role1: '🚀 Инициатор и руководитель',
-                desc1: '<strong>17+ лет</strong> в фармацевтике. GMP, цифровизация QC/QA.',
-                ready1: '✅ Готов',
-                role2: '⚙️ Главный инженер',
-                desc2: '<strong>25+ лет</strong> в промышленности. АО «Химфарм», запуск GMP.',
-                ready2: '✅ Готов',
-                spec1: 'Контроль качества',
-                spec1d: 'ISO 13485, GMP, валидация',
-                spec1b: '✅ В штате',
-                spec2: 'Стандартизация',
-                spec2d: 'Регистрация МИ, ЕАЭС',
-                spec2b: '✅ В штате',
-                spec3: 'SAP-технологии',
-                spec3d: 'Суперабсорбенты, оптимизация',
-                spec3b: '✅ В штате',
-                spec4: 'Логистика',
-                spec4d: 'Импорт, тендеры',
-                spec4b: '✅ В штате',
-                readyBig: '🚀 <strong>ГОТОВНОСТЬ 100%</strong> — команда укомплектована, все специалисты готовы к старту!',
-                sezTitle: '🏛️ СЭЗ «Alatau» — <span class="highlight">налоговые преференции</span>',
-                sezDesc: 'КПН 0%, НДС 0%, Земля 0%, Имущество 0% — на 10 лет',
-                sez1: 'КПН 0%',
-                sez1d: 'Экономия ~20% от прибыли',
-                sez2: 'НДС 0%',
-                sez2d: 'Ввоз оборудования + реализация',
-                sez3: 'Земельный налог 0%',
-                sez3d: 'На весь период договора',
-                sez4: 'Налог на имущество 0%',
-                sez4d: 'Производственные активы',
-                sapTitle: '🧪 Технология <span class="highlight">SAP</span>',
-                sapDesc: 'Оптимальное соотношение SAP 35%',
-                sap1t: '❌ Вариант 1',
-                sap1a: 'SAP на поверхности',
-                sap1c: '⚠️ БЛОКИРОВКА',
-                sap1d: 'Сухое ядро',
-                sap1e: '❌ Неэффективно',
-                sap1b: 'НЕЭФФЕКТИВНО',
-                sap2t: '🔶 Вариант 2',
-                sap2a: 'Целлюлоза 80%',
-                sap2b: 'SAP 20%',
-                sap2c: 'Целлюлоза 80%',
-                sap2e: '⚠️ Низкая абсорбция',
-                sap2b: 'СРЕДНЯЯ',
-                sap3t: '✅ Вариант 3 — НАШ',
-                sap3b: '🌟 SAP 35% + Целлюлоза 65%',
-                sap3c: '✅ РАВНОМЕРНОЕ',
-                sap3d: '💧 МАКСИМАЛЬНОЕ',
-                sap3e: '✅ Оптимально для тяжелой инконтиненции',
-                sap3b: '✅ ОПТИМАЛЬНО',
-                sapNote: '📌 <strong>Наше преимущество:</strong> SAP 35% с равномерным распределением. <strong>Максимальное поглощение</strong> и предотвращение протекания.',
-                oiTitle: '♿ Статус <span style="color:#fbbf24;">организации инвалидов</span>',
-                oiDesc: '60% сотрудников с инвалидностью 2-3 группы',
-                oi1: '60%',
-                oi1d: 'Сотрудников 2-3 группы',
-                oi2: 'КПН 0%',
-                oi2d: 'Полное освобождение',
-                oi3: 'НДС 0%',
-                oi3d: 'Освобождение от НДС',
-                oi4: 'Приоритет',
-                oi4d: '+ квота 50%',
-                returnTitle: '💰 Возврат инвестиций — <span class="highlight">QazIndustry</span>',
-                returnDesc: 'Постфинансирование до 40% затрат',
-                ret1: 'Компенсация до 40%',
-                ret1a: '• <strong>До 40%</strong> на оборудование',
-                ret1b: '• <strong>До 50%</strong> на сертификацию',
-                ret1c: '• <strong>Лимит 60 млн тг</strong> в год',
-                ret1d: '• Глубина <strong>до 24 месяцев</strong>',
-                ret1b: 'Постфинансирование',
-                ret2: 'Условия получения',
-                ret2a: '• <strong>Реестр</strong> отечественных производителей',
-                ret2b: '• Отсутствие <strong>налоговой задолженности</strong>',
-                ret2c: '• Рост <strong>налоговых отчислений</strong> за 3 года',
-                ret2d: '• <strong>Удвоение дохода</strong> от суммы поддержки',
-                ret2b: 'Требуется соблюдение',
-                retScheme: '📌 Схема работы:',
-                retSchemeD: '<strong>1.</strong> Оплата оборудования → <strong>2.</strong> Ввод в эксплуатацию → <strong>3.</strong> Заявка в QazIndustry → <strong>4.</strong> Возмещение до 40%',
-                prodTitle: 'Продуктовая <span class="highlight">линейка</span>',
-                prodDesc: 'Код ТН ВЭД 9619 00 890 9',
-                prod1: '📦 Продукт',
-                prod1a: '• <strong>Тип:</strong> Анатомический',
-                prod1b: '• <strong>Размеры:</strong> L, XL',
-                prod1c: '• <strong>Абсорбция:</strong> до 10 капель',
-                prod1d: '• <strong>SAP:</strong> 28–30 г, 35%',
-                prod1e: '• <strong>Регистрация:</strong> МИ класс 1',
-                prod2: '⚙️ Производственная линия',
-                prod2a: '• <strong>Скорость:</strong> 220–250 шт/мин',
-                prod2b: '• <strong>Мощность:</strong> 2 205 000 шт/мес',
-                prod2c: '• <strong>КПД:</strong> 85%, брак ≤ 2%',
-                prod2d: '• <strong>Стоимость:</strong> ~748 млн тг',
-                prod2e: '• <strong>Монтаж:</strong> 4–6 недель',
-                mapTitle: '📍 Расположение <span class="highlight">производства</span>',
-                mapDesc: 'СЭЗ «Alatau» — Алматинская область',
-                contactTitle: '📄 Получите доступ к <span style="color:#d97706;">Data Room</span>',
-                contactDesc: 'Финансовая модель, договор СЭЗ, спецификация, резюме команды.',
-                labelName: 'Ваше имя',
-                labelCompany: 'Компания',
-                labelPhone: 'Телефон (WhatsApp)',
-                labelMessage: 'Сообщение',
-                labelAgree: 'Я согласен с политикой конфиденциальности',
-                btnWhatsApp: '💬 Отправить в WhatsApp',
-                footer1: 'Юридический адрес',
-                footer1d: 'СЭЗ «Alatau», Алматинская область',
-                footer2: 'Документы',
-                footer2a: 'Закон РК «О СЭЗ»',
-                footer2b: 'Правила QazIndustry',
-                footer3: 'Команда',
-                footer3d: 'Ахмет Сауле — руководитель<br />Субботин А. — гл. инженер',
-                footerCopy: '⚡ Инвестиционный проект — Производство подгузников для взрослых | СЭЗ «Alatau»'
-            },
-            kz: {
-                ribbon: '🔒 Құпия — тек инвесторлар үшін',
-                heroBadge: '📋 «Alatau» АЭА резиденті мәртебесіне өтінім берілді',
-                heroTitle: 'Ересектерге арналған <br /> жаялықтар <span>«Alatau» АЭА-да</span>',
-                heroDesc: 'Мемлекеттік қолдаумен импортты алмастыру. <br /> 17+ жыл тәжірибесі бар сарапшылар тобы. <strong style="color:#fbbf24;">ДАЙЫНДЫҚ 100%</strong>',
-                f1Title: 'АЭА',
-                f1Sub: 'КПН 0% · ҚҚС 0%',
-                f1Label: '10 жыл жеңілдік',
-                f2Title: '60%',
-                f2Sub: 'МҮГЕДЕКТЕР',
-                f2Label: '2-3 топ',
-                f3Title: '40% ДЕЙІН',
-                f3Sub: 'ҚАЙТАРУ',
-                f3Label: 'QazIndustry',
-                stat1: 'IRR',
-                stat2: 'ай өтелу',
-                stat3: 'млрд тг CAPEX',
-                stat4: 'млн дана/ай',
-                btnMaterials: '📄 Материалдар алу',
-                btnPdf: '📥 PDF',
-                btnTeam: '👥 Команда',
-                btnWhatsAppHeader: '💬 WhatsApp',
-                teamTitle: '👥 Жобаның <span class="highlight">командасы</span>',
-                teamDesc: 'ҚР үздік мамандары. <strong style="color:#16a34a;">100% дайын!</strong>',
-                role1: '🚀 Бастамашы және жетекші',
-                desc1: '<strong>17+ жыл</strong> фармацевтикада. GMP, QC/QA цифрландыру.',
-                ready1: '✅ Дайын',
-                role2: '⚙️ Бас инженер',
-                desc2: '<strong>25+ жыл</strong> өнеркәсіпте. «Химфарм», GMP іске қосу.',
-                ready2: '✅ Дайын',
-                spec1: 'Сапаны бақылау',
-                spec1d: 'ISO 13485, GMP, валидация',
-                spec1b: '✅ Штатта',
-                spec2: 'Стандарттау',
-                spec2d: 'МИ тіркеу, ЕАЭО',
-                spec2b: '✅ Штатта',
-                spec3: 'SAP-технология',
-                spec3d: 'Суперабсорбенттер',
-                spec3b: '✅ Штатта',
-                spec4: 'Логистика',
-                spec4d: 'Импорт, тендерлер',
-                spec4b: '✅ Штатта',
-                readyBig: '🚀 <strong>ДАЙЫНДЫҚ 100%</strong> — команда толық жиналды!',
-                sezTitle: '🏛️ «Alatau» АЭА — <span class="highlight">салықтық преференциялар</span>',
-                sezDesc: 'КПН 0%, ҚҚС 0%, Жер 0%, Мүлік 0% — 10 жылға',
-                sez1: 'КПН 0%',
-                sez1d: 'Пайдадан ~20% үнемдеу',
-                sez2: 'ҚҚС 0%',
-                sez2d: 'Жабдық әкелу + өткізу',
-                sez3: 'Жер салығы 0%',
-                sez3d: 'Келісімшарт мерзіміне',
-                sez4: 'Мүлік салығы 0%',
-                sez4d: 'Өндірістік активтер',
-                sapTitle: '🧪 <span class="highlight">SAP</span> технологиясы',
-                sapDesc: 'SAP 35% оңтайлы арақатынас',
-                sap1t: '❌ 1-нұсқа',
-                sap1a: 'SAP бетінде',
-                sap1c: '⚠️ БІТЕЛУ',
-                sap1d: 'Құрғақ өзек',
-                sap1e: '❌ Тиімсіз',
-                sap1b: 'ТИІМСІЗ',
-                sap2t: '🔶 2-нұсқа',
-                sap2a: 'Целлюлоза 80%',
-                sap2b: 'SAP 20%',
-                sap2c: 'Целлюлоза 80%',
-                sap2e: '⚠️ Төмен сіңіргіштік',
-                sap2b: 'ОРТАША',
-                sap3t: '✅ 3-нұсқа — БІЗДІК',
-                sap3b: '🌟 SAP 35% + Целлюлоза 65%',
-                sap3c: '✅ БІРКЕЛКІ',
-                sap3d: '💧 МАКСИМАЛДЫ',
-                sap3e: '✅ Ауыр инконтиненцияға оңтайлы',
-                sap3b: '✅ ОҢТАЙЛЫ',
-                sapNote: '📌 <strong>Артықшылығымыз:</strong> SAP 35% біркелкі тарату. <strong>Максималды сіңіру</strong> және ағуды болдырмау.',
-                oiTitle: '♿ <span style="color:#fbbf24;">Мүгедектер ұйымының</span> мәртебесі',
-                oiDesc: 'Қызметкерлердің 60% 2-3 топ мүгедектігі бар',
-                oi1: '60%',
-                oi1d: '2-3 топ қызметкерлер',
-                oi2: 'КПН 0%',
-                oi2d: 'Толық босату',
-                oi3: 'ҚҚС 0%',
-                oi3d: 'ҚҚС-тан босату',
-                oi4: 'Басымдық',
-                oi4d: '+ 50% квота',
-                returnTitle: '💰 Инвестицияларды қайтару — <span class="highlight">QazIndustry</span>',
-                returnDesc: 'Шығындардың 40% дейін постфинансирование',
-                ret1: '40% дейін өтемақы',
-                ret1a: '• <strong>40% дейін</strong> жабдыққа',
-                ret1b: '• <strong>50% дейін</strong> сертификаттауға',
-                ret1c: '• <strong>Шек 60 млн тг</strong> жылына',
-                ret1d: '• Тереңдік <strong>24 айға дейін</strong>',
-                ret1b: 'Постфинансирование',
-                ret2: 'Алу шарттары',
-                ret2a: '• Отандық өндірушілер <strong>Тізілімі</strong>',
-                ret2b: '• <strong>Салық берешегі</strong> жоқ',
-                ret2c: '• <strong>Салық түсімдерінің</strong> 3 жылдағы өсімі',
-                ret2d: '• Қолдау сомасынан <strong>табысты екі еселеу</strong>',
-                ret2b: 'Сақтау талап етіледі',
-                retScheme: '📌 Жұмыс схемасы:',
-                retSchemeD: '<strong>1.</strong> Жабдықты төлеу → <strong>2.</strong> Пайдалануға беру → <strong>3.</strong> QazIndustry-ға өтінім → <strong>4.</strong> 40% дейін өтеу',
-                prodTitle: 'Өнім <span class="highlight">желісі</span>',
-                prodDesc: 'ТН ВЭД коды 9619 00 890 9',
-                prod1: '📦 Өнім',
-                prod1a: '• <strong>Түрі:</strong> Анатомиялық',
-                prod1b: '• <strong>Өлшемдері:</strong> L, XL',
-                prod1c: '• <strong>Сіңіргіштігі:</strong> 10 тамшыға дейін',
-                prod1d: '• <strong>SAP:</strong> 28–30 г, 35%',
-                prod1e: '• <strong>Тіркеу:</strong> МИ 1-сынып',
-                prod2: '⚙️ Өндірістік желі',
-                prod2a: '• <strong>Жылдамдық:</strong> 220–250 дана/мин',
-                prod2b: '• <strong>Қуат:</strong> 2 205 000 дана/ай',
-                prod2c: '• <strong>ПӘК:</strong> 85%, ақау ≤ 2%',
-                prod2d: '• <strong>Құны:</strong> ~748 млн тг',
-                prod2e: '• <strong>Монтаж:</strong> 4–6 апта',
-                mapTitle: '📍 Өндірістің <span class="highlight">орналасқан жері</span>',
-                mapDesc: '«Alatau» АЭА — Алматы облысы',
-                contactTitle: '📄 <span style="color:#d97706;">Data Room</span> қол жеткізіңіз',
-                contactDesc: 'Қаржылық модель, АЭА келісімшарты, сипаттама, команда резюмесі.',
-                labelName: 'Атыңыз',
-                labelCompany: 'Компания',
-                labelPhone: 'Телефон (WhatsApp)',
-                labelMessage: 'Хабарлама',
-                labelAgree: 'Құпиялылық саясатымен келісемін',
-                btnWhatsApp: '💬 WhatsApp арқылы жіберу',
-                footer1: 'Заңды мекенжайы',
-                footer1d: '«Alatau» АЭА, Алматы облысы',
-                footer2: 'Құжаттар',
-                footer2a: 'ҚР «АЭА туралы» Заңы',
-                footer2b: 'QazIndustry ережелері',
-                footer3: 'Команда',
-                footer3d: 'Ахмет Сауле — жетекші<br />Субботин А. — бас инженер',
-                footerCopy: '⚡ Инвестициялық жоба — Ересектерге арналған жаялықтар | «Alatau» АЭА'
-            },
-            en: {
-                ribbon: '🔒 Confidential — for investors only',
-                heroBadge: '📋 SEZ «Alatau» resident status application submitted',
-                heroTitle: 'Adult Diaper <br /> Production <span>in SEZ «Alatau»</span>',
-                heroDesc: 'Import substitution with state support. <br /> Expert team with 17+ years experience. <strong style="color:#fbbf24;">100% READY</strong>',
-                f1Title: 'SEZ',
-                f1Sub: 'CIT 0% · VAT 0%',
-                f1Label: '10 years benefits',
-                f2Title: '60%',
-                f2Sub: 'DISABLED',
-                f2Label: 'Group 2-3',
-                f3Title: 'UP TO 40%',
-                f3Sub: 'RETURN',
-                f3Label: 'QazIndustry',
-                stat1: 'IRR',
-                stat2: 'months payback',
-                stat3: 'billion KZT CAPEX',
-                stat4: 'mln pcs/month',
-                btnMaterials: '📄 Get materials',
-                btnPdf: '📥 PDF',
-                btnTeam: '👥 Team',
-                btnWhatsAppHeader: '💬 WhatsApp',
-                teamTitle: '👥 Project <span class="highlight">team</span>',
-                teamDesc: 'Top specialists of Kazakhstan. <strong style="color:#16a34a;">100% ready!</strong>',
-                role1: '🚀 Project initiator & leader',
-                desc1: '<strong>17+ years</strong> in pharma. GMP, QC/QA digitalization.',
-                ready1: '✅ Ready',
-                role2: '⚙️ Chief Engineer',
-                desc2: '<strong>25+ years</strong> in industry. «Khimpharm», GMP launch.',
-                ready2: '✅ Ready',
-                spec1: 'Quality Control',
-                spec1d: 'ISO 13485, GMP, validation',
-                spec1b: '✅ In staff',
-                spec2: 'Standardization',
-                spec2d: 'MI registration, EAEU',
-                spec2b: '✅ In staff',
-                spec3: 'SAP Technology',
-                spec3d: 'Superabsorbents, optimization',
-                spec3b: '✅ In staff',
-                spec4: 'Logistics',
-                spec4d: 'Import, tenders',
-                spec4b: '✅ In staff',
-                readyBig: '🚀 <strong>100% READY</strong> — team is fully staffed!',
-                sezTitle: '🏛️ SEZ «Alatau» — <span class="highlight">tax preferences</span>',
-                sezDesc: 'CIT 0%, VAT 0%, Land 0%, Property 0% — for 10 years',
-                sez1: 'CIT 0%',
-                sez1d: 'Savings ~20% of profit',
-                sez2: 'VAT 0%',
-                sez2d: 'Equipment import + sales',
-                sez3: 'Land tax 0%',
-                sez3d: 'For contract period',
-                sez4: 'Property tax 0%',
-                sez4d: 'Production assets',
-                sapTitle: '🧪 <span class="highlight">SAP</span> Technology',
-                sapDesc: 'Optimal SAP ratio 35%',
-                sap1t: '❌ Option 1',
-                sap1a: 'SAP on surface',
-                sap1c: '⚠️ BLOCKING',
-                sap1d: 'Dry core',
-                sap1e: '❌ Ineffective',
-                sap1b: 'INEFFECTIVE',
-                sap2t: '🔶 Option 2',
-                sap2a: 'Cellulose 80%',
-                sap2b: 'SAP 20%',
-                sap2c: 'Cellulose 80%',
-                sap2e: '⚠️ Low absorption',
-                sap2b: 'MEDIUM',
-                sap3t: '✅ Option 3 — OURS',
-                sap3b: '🌟 SAP 35% + Cellulose 65%',
-                sap3c: '✅ UNIFORM',
-                sap3d: '💧 MAXIMUM',
-                sap3e: '✅ Optimal for severe incontinence',
-                sap3b: '✅ OPTIMAL',
-                sapNote: '📌 <strong>Our advantage:</strong> SAP 35% with uniform distribution. <strong>Maximum absorption</strong> and prevents leakage.',
-                oiTitle: '♿ <span style="color:#fbbf24;">Disabled organization</span> status',
-                oiDesc: '60% employees with disability group 2-3',
-                oi1: '60%',
-                oi1d: 'Employees group 2-3',
-                oi2: 'CIT 0%',
-                oi2d: 'Full exemption',
-                oi3: 'VAT 0%',
-                oi3d: 'VAT exemption',
-                oi4: 'Priority',
-                oi4d: '+ 50% quota',
-                returnTitle: '💰 Investment return — <span class="highlight">QazIndustry</span>',
-                returnDesc: 'Post-financing up to 40% of costs',
-                ret1: 'Compensation up to 40%',
-                ret1a: '• <strong>Up to 40%</strong> for equipment',
-                ret1b: '• <strong>Up to 50%</strong> for certification',
-                ret1c: '• <strong>Limit 60 million KZT</strong> per year',
-                ret1d: '• Depth <strong>up to 24 months</strong>',
-                ret1b: 'Post-financing',
-                ret2: 'Conditions',
-                ret2a: '• <strong>Register</strong> of domestic producers',
-                ret2b: '• No <strong>tax arrears</strong>',
-                ret2c: '• Growth of <strong>tax contributions</strong> over 3 years',
-                ret2d: '• <strong>Doubling of income</strong> from support',
-                ret2b: 'Compliance required',
-                retScheme: '📌 Workflow:',
-                retSchemeD: '<strong>1.</strong> Equipment payment → <strong>2.</strong> Commissioning → <strong>3.</strong> Application to QazIndustry → <strong>4.</strong> Reimbursement up to 40%',
-                prodTitle: 'Product <span class="highlight">line</span>',
-                prodDesc: 'HS Code 9619 00 890 9',
-                prod1: '📦 Product',
-                prod1a: '• <strong>Type:</strong> Anatomical',
-                prod1b: '• <strong>Sizes:</strong> L, XL',
-                prod1c: '• <strong>Absorption:</strong> up to 10 drops',
-                prod1d: '• <strong>SAP:</strong> 28–30 g, 35%',
-                prod1e: '• <strong>Registration:</strong> MD class 1',
-                prod2: '⚙️ Production line',
-                prod2a: '• <strong>Speed:</strong> 220–250 pcs/min',
-                prod2b: '• <strong>Capacity:</strong> 2,205,000 pcs/month',
-                prod2c: '• <strong>Efficiency:</strong> 85%, defect ≤ 2%',
-                prod2d: '• <strong>Cost:</strong> ~748 million KZT',
-                prod2e: '• <strong>Installation:</strong> 4–6 weeks',
-                mapTitle: '📍 Production <span class="highlight">location</span>',
-                mapDesc: 'SEZ «Alatau» — Almaty region',
-                contactTitle: '📄 Get access to <span style="color:#d97706;">Data Room</span>',
-                contactDesc: 'Financial model, SEZ agreement, specifications, team CVs.',
-                labelName: 'Your name',
-                labelCompany: 'Company',
-                labelPhone: 'Phone (WhatsApp)',
-                labelMessage: 'Message',
-                labelAgree: 'I agree to privacy policy',
-                btnWhatsApp: '💬 Send via WhatsApp',
-                footer1: 'Legal address',
-                footer1d: 'SEZ «Alatau», Almaty region',
-                footer2: 'Documents',
-                footer2a: 'Law of RK «On SEZ»',
-                footer2b: 'QazIndustry Rules',
-                footer3: 'Team',
-                footer3d: 'Akhmetsaule — Leader<br />Subbotin A. — Chief Engineer',
-                footerCopy: '⚡ Investment project — Adult Diaper Production | SEZ «Alatau»'
-            }
-        };
-
-        // ==========================================
-        // ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА
-        // ==========================================
-        let currentLang = 'ru';
-
-        function switchLanguage(lang) {
-            currentLang = lang;
-            const t = translations[lang];
-            if (!t) return;
-
-            Object.keys(t).forEach(key => {
-                const el = document.getElementById(key);
-                if (el) {
-                    if (key === 'heroTitle' || key === 'teamTitle' || key === 'sezTitle' ||
-                        key === 'mapTitle' || key === 'sapTitle' || key === 'returnTitle' ||
-                        key === 'prodTitle' || key === 'oiTitle' || key === 'contactTitle') {
-                        el.innerHTML = t[key];
-                    } else {
-                        el.innerHTML = t[key];
-                    }
-                }
-            });
-
-            document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
-            document.querySelector(`.lang-switch a[data-lang="${lang}"]`)?.classList.add('active');
-
-            showToast(`🌐 ${lang === 'ru' ? 'Русский' : lang === 'kz' ? 'Қазақша' : 'English'}`, 'success');
+        function openWhatsApp() {
+            const YOUR_WHATSAPP = '77777717707';
+            const text = 'Здравствуйте! Меня интересует инвестиционный проект "Подгузники для взрослых СЭЗ Alatau". Хочу получить инвестиционные материалы.';
+            window.open(`https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
+            showToast('✅ Переход в WhatsApp!', 'success');
         }
 
         // ==========================================
-        // ПЕРЕКЛЮЧАТЕЛЬ ВКЛАДОК
-        // ==========================================
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-
-                const tabId = this.dataset.tab;
-                document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-                document.getElementById(tabId)?.classList.add('active');
-            });
-        });
-
-        // ==========================================
-        // КАРТА
-        // ==========================================
-        document.addEventListener('DOMContentLoaded', function() {
-            const map = L.map('map').setView([43.6345, 76.8270], 13);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap'
-            }).addTo(map);
-
-            const customIcon = L.divIcon({
-                html: '<div style="background:#dc2626;color:#fff;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:18px;border:3px solid #fbbf24;">🏭</div>',
-                iconSize: [32, 32],
-                iconAnchor: [16, 32]
-            });
-
-            L.marker([43.6345, 76.8270], { icon: customIcon })
-                .addTo(map)
-                .bindPopup('🏭 SEZ «Alatau» — planned site');
-
-            L.circle([43.6345, 76.8270], {
-                color: '#fbbf24',
-                fillColor: '#fbbf24',
-                fillOpacity: 0.1,
-                radius: 1000
-            }).addTo(map);
-
-            setTimeout(() => map.invalidateSize(), 500);
-        });
-
-        // ==========================================
-        // WHATSAPP (ВАШ НОМЕР)
+        // WHATSAPP (ФОРМА)
         // ==========================================
         function sendToWhatsApp(event) {
             event.preventDefault();
@@ -1690,24 +962,11 @@
             const message = document.getElementById('message').value;
 
             const YOUR_WHATSAPP = '77777717707';
-
             const text = `Здравствуйте! Меня интересует инвестиционный проект "Подгузники для взрослых СЭЗ Alatau".%0A%0A👤 Имя: ${name}%0A🏢 Компания: ${company || 'Не указана'}%0A📞 Телефон: ${phone}%0A💬 ${message || 'Хочу получить доступ к Data Room'}`;
 
             window.open(`https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
             showToast('✅ Переход в WhatsApp!', 'success');
             document.getElementById('investorForm').reset();
-        }
-
-        // ==========================================
-        // TOAST
-        // ==========================================
-        function showToast(message, type = 'success') {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.className = 'toast';
-            if (type === 'error') toast.classList.add('error');
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 4000);
         }
 
         // ==========================================
@@ -1731,9 +990,72 @@
             });
         }
 
-        console.log('✅ Сайт обновлен! Только WhatsApp.');
+        // ==========================================
+        // TOAST
+        // ==========================================
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast';
+            if (type === 'error') toast.classList.add('error');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 4000);
+        }
+
+        // ==========================================
+        // ВКЛАДКИ
+        // ==========================================
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const tabId = this.dataset.tab;
+                document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+                document.getElementById(tabId)?.classList.add('active');
+            });
+        });
+
+        // ==========================================
+        // КАРТА
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = L.map('map').setView([43.6345, 76.8270], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap'
+            }).addTo(map);
+
+            const customIcon = L.divIcon({
+                html: '<div style="background:#dc2626;color:#fff;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:18px;border:3px solid #fbbf24;">🏭</div>',
+                iconSize: [32, 32],
+                iconAnchor: [16, 32]
+            });
+
+            L.marker([43.6345, 76.8270], { icon: customIcon })
+                .addTo(map)
+                .bindPopup('🏭 СЭЗ «Alatau» — планируемый участок');
+
+            L.circle([43.6345, 76.8270], {
+                color: '#fbbf24',
+                fillColor: '#fbbf24',
+                fillOpacity: 0.1,
+                radius: 1000
+            }).addTo(map);
+
+            setTimeout(() => map.invalidateSize(), 500);
+        });
+
+        // ==========================================
+        // ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА
+        // ==========================================
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
+            document.querySelector(`.lang-switch a[data-lang="${lang}"]`)?.classList.add('active');
+            showToast(`🌐 ${lang === 'ru' ? 'Русский' : lang === 'kz' ? 'Қазақша' : 'English'}`, 'success');
+        }
+
+        console.log('✅ Сайт полностью работает!');
+        console.log('📌 Google Analytics ID: G-HS4ZJE68XG');
         console.log('📌 WhatsApp: 77777717707');
     </script>
-
 </body>
 </html>
