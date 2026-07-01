@@ -7,18 +7,28 @@
     
     <meta name="description" content="Инвестиционный проект по производству подгузников для взрослых в СЭЗ «Alatau». Команда экспертов. Готовность 100%." />
     
-    <!-- ===== GOOGLE ANALYTICS (ВАШ ID) ===== -->
+    <!-- Google Analytics (ВАШ ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS4ZJE68XG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-HS4ZJE68XG');
-        console.log('✅ Google Analytics загружен! ID: G-HS4ZJE68XG');
     </script>
+    
+    <!-- Yandex Metrika (ЗАМЕНИТЕ XXXXXXXX) -->
+    <script>
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+        k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(XXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
@@ -942,18 +952,17 @@
 
     <script>
         // ==========================================
-        // WHATSAPP (ГЛАВНАЯ КНОПКА) — ИСПРАВЛЕНО!
+        // WHATSAPP (ГЛАВНАЯ КНОПКА)
         // ==========================================
         function openWhatsApp() {
             const YOUR_WHATSAPP = '77777717707';
             const text = 'Здравствуйте! Меня интересует инвестиционный проект "Подгузники для взрослых СЭЗ Alatau". Хочу получить инвестиционные материалы.';
-            const url = `https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`;
-            window.open(url, '_blank');
-            showToast('✅ Открыт WhatsApp!', 'success');
+            window.open(`https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
+            showToast('✅ Переход в WhatsApp!', 'success');
         }
 
         // ==========================================
-        // WHATSAPP (ФОРМА) — ИСПРАВЛЕНО!
+        // WHATSAPP (ФОРМА)
         // ==========================================
         function sendToWhatsApp(event) {
             event.preventDefault();
@@ -965,9 +974,8 @@
             const YOUR_WHATSAPP = '77777717707';
             const text = `Здравствуйте! Меня интересует инвестиционный проект "Подгузники для взрослых СЭЗ Alatau".%0A%0A👤 Имя: ${name}%0A🏢 Компания: ${company || 'Не указана'}%0A📞 Телефон: ${phone}%0A💬 ${message || 'Хочу получить доступ к Data Room'}`;
 
-            const url = `https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`;
-            window.open(url, '_blank');
-            showToast('✅ Открыт WhatsApp!', 'success');
+            window.open(`https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
+            showToast('✅ Переход в WhatsApp!', 'success');
             document.getElementById('investorForm').reset();
         }
 
@@ -1047,7 +1055,7 @@
         });
 
         // ==========================================
-        // ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА
+        // ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА (УПРОЩЕННЫЙ)
         // ==========================================
         function switchLanguage(lang) {
             document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
@@ -1056,9 +1064,8 @@
         }
 
         console.log('✅ Сайт полностью работает!');
-        console.log('📌 Google Analytics ID: G-HS4ZJE68XG');
-        console.log('📌 WhatsApp номер: 77777717707 (это ваш номер)');
-        console.log('📌 Теперь сообщения приходят ВАМ!');
+        console.log('📌 WhatsApp: 77777717707');
+        console.log('📌 Google Analytics: G-HS4ZJE68XG');
     </script>
 </body>
 </html>
