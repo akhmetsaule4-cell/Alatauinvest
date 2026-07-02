@@ -7,28 +7,20 @@
     
     <meta name="description" content="Инвестиционный проект по производству подгузников для взрослых в СЭЗ «Alatau». Команда экспертов. Готовность 100%." />
     
-    <!-- Google Analytics (ВАШ ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS4ZJE68XG"></script>
+    <!-- ===== GOOGLE ANALYTICS (НОВЫЙ ID) ===== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MM0KR7C2SD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-HS4ZJE68XG');
+        gtag('config', 'G-MM0KR7C2SD');
+        console.log('✅ Google Analytics загружен! ID: G-MM0KR7C2SD');
     </script>
-    
-    <!-- Yandex Metrika (ЗАМЕНИТЕ XXXXXXXX) -->
-    <script>
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0];
-        k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-        ym(XXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     
+    <!-- Leaflet для карты -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
@@ -523,7 +515,7 @@
 
     <div class="confidential-ribbon" id="ribbon">🔒 Конфиденциально — только для инвесторов</div>
 
-    <!-- ===== HERO ===== -->
+    <!-- HERO -->
     <header class="hero">
         <div class="container">
             <div class="hero-badge" id="heroBadge">📋 Заявка на статус резидента СЭЗ «Alatau» подана</div>
@@ -585,7 +577,7 @@
         </div>
     </header>
 
-    <!-- ===== ВКЛАДКИ ===== -->
+    <!-- ВКЛАДКИ -->
     <div class="tabs-container">
         <div class="container">
             <div class="tabs" id="tabHeaders">
@@ -601,7 +593,7 @@
         </div>
     </div>
 
-    <!-- ===== СОДЕРЖИМОЕ ВКЛАДОК ===== -->
+    <!-- СОДЕРЖИМОЕ ВКЛАДОК -->
     <div class="container">
 
         <!-- TAB 1: КОМАНДА -->
@@ -777,7 +769,7 @@
             </section>
         </div>
 
-        <!-- TAB 5: ВОЗВРАТ ИНВЕСТИЦИЙ -->
+        <!-- TAB 5: ВОЗВРАТ -->
         <div class="tab-content" id="return-tab">
             <section>
                 <h2 class="section-title" id="returnTitle">💰 Возврат инвестиций — <span class="highlight">QazIndustry</span></h2>
@@ -897,7 +889,7 @@
 
     </div>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="col">
@@ -923,7 +915,7 @@
 
     <div id="toast" class="toast">✅ Сообщение отправлено!</div>
 
-    <!-- ===== PDF КОНТЕНТ ===== -->
+    <!-- PDF -->
     <div id="pdfContent">
         <h1>Инвестиционный меморандум</h1>
         <h2>Производство подгузников для взрослых</h2>
@@ -952,18 +944,441 @@
 
     <script>
         // ==========================================
-        // WHATSAPP (ГЛАВНАЯ КНОПКА)
+        // ПЕРЕВОДЫ НА 3 ЯЗЫКА (ПОЛНЫЙ НАБОР)
+        // ==========================================
+        const translations = {
+            ru: {
+                heroBadge: '📋 Заявка на статус резидента СЭЗ «Alatau» подана',
+                heroTitle: 'Производство подгузников <br /> для взрослых <span>в СЭЗ «Alatau»</span>',
+                heroDesc: '<strong>Первый в Казахстане</strong> производитель подгузников для взрослых с полным циклом контроля качества. Проект решает задачу <strong>импортозамещения</strong> в сегменте медицинских изделий для ухода за лежачими пациентами.<br /><br />Казахстан <strong>импортирует 100%</strong> подобной продукции — внутреннего производства нет. Мы создаем производство на территории <strong>СЭЗ «Alatau»</strong> с налоговыми преференциями 0%.<br /><br />Команда — <strong>эксперты с 17+ лет</strong> опыта в фармацевтике и GMP-производстве. <strong style="color:#fbbf24;">Готовность 100% к запуску.</strong>',
+                f1Title: 'СЭЗ',
+                f1Sub: 'КПН 0% · НДС 0%',
+                f1Label: '10 лет льгот',
+                f2Title: '60%',
+                f2Sub: 'ИНВАЛИДЫ',
+                f2Label: '2-3 группы',
+                f3Title: 'ДО 40%',
+                f3Sub: 'ВОЗВРАТ',
+                f3Label: 'QazIndustry',
+                stat1: 'IRR',
+                stat2: 'мес. окупаемость',
+                stat3: 'млрд тг CAPEX',
+                stat4: 'млн шт/мес',
+                btnMaterials: '📄 Получить материалы',
+                btnPdf: '📥 PDF',
+                btnTeam: '👥 Команда',
+                btnWhatsAppHeader: '💬 WhatsApp',
+                teamTitle: '👥 Команда <span class="highlight">проекта</span>',
+                teamDesc: 'Сильнейшие специалисты РК. <strong style="color:#16a34a;">100% готовность!</strong>',
+                role1: '🚀 Инициатор и руководитель',
+                desc1: '<strong>17+ лет</strong> в фармацевтике. GMP, цифровизация QC/QA.',
+                ready1: '✅ Готов',
+                role2: '⚙️ Главный инженер',
+                desc2: '<strong>25+ лет</strong> в промышленности. АО «Химфарм», запуск GMP.',
+                ready2: '✅ Готов',
+                spec1: 'Контроль качества',
+                spec1d: 'ISO 13485, GMP, валидация',
+                spec1b: '✅ В штате',
+                spec2: 'Стандартизация',
+                spec2d: 'Регистрация МИ, ЕАЭС',
+                spec2b: '✅ В штате',
+                spec3: 'SAP-технологии',
+                spec3d: 'Суперабсорбенты, оптимизация',
+                spec3b: '✅ В штате',
+                spec4: 'Логистика',
+                spec4d: 'Импорт, тендеры',
+                spec4b: '✅ В штате',
+                readyBig: '🚀 <strong>ГОТОВНОСТЬ 100%</strong> — команда укомплектована, все специалисты готовы к старту!',
+                sezTitle: '🏛️ СЭЗ «Alatau» — <span class="highlight">налоговые преференции</span>',
+                sezDesc: 'КПН 0%, НДС 0%, Земля 0%, Имущество 0% — на 10 лет',
+                sez1: 'КПН 0%',
+                sez1d: 'Экономия ~20% от прибыли',
+                sez2: 'НДС 0%',
+                sez2d: 'Ввоз оборудования + реализация',
+                sez3: 'Земельный налог 0%',
+                sez3d: 'На весь период договора',
+                sez4: 'Налог на имущество 0%',
+                sez4d: 'Производственные активы',
+                sapTitle: '🧪 Технология <span class="highlight">SAP</span>',
+                sapDesc: 'Оптимальное соотношение SAP 35%',
+                sap1t: '❌ Вариант 1',
+                sap1a: 'SAP на поверхности',
+                sap1c: '⚠️ БЛОКИРОВКА',
+                sap1d: 'Сухое ядро',
+                sap1e: '❌ Неэффективно',
+                sap1b: 'НЕЭФФЕКТИВНО',
+                sap2t: '🔶 Вариант 2',
+                sap2a: 'Целлюлоза 80%',
+                sap2b: 'SAP 20%',
+                sap2c: 'Целлюлоза 80%',
+                sap2e: '⚠️ Низкая абсорбция',
+                sap2b: 'СРЕДНЯЯ',
+                sap3t: '✅ Вариант 3 — НАШ',
+                sap3b: '🌟 SAP 35% + Целлюлоза 65%',
+                sap3c: '✅ РАВНОМЕРНОЕ',
+                sap3d: '💧 МАКСИМАЛЬНОЕ',
+                sap3e: '✅ Оптимально для тяжелой инконтиненции',
+                sap3b: '✅ ОПТИМАЛЬНО',
+                sapNote: '📌 <strong>Наше преимущество:</strong> SAP 35% с равномерным распределением. <strong>Максимальное поглощение</strong> и предотвращение протекания.',
+                oiTitle: '♿ Статус <span style="color:#fbbf24;">организации инвалидов</span>',
+                oiDesc: '60% сотрудников с инвалидностью 2-3 группы',
+                oi1: '60%',
+                oi1d: 'Сотрудников 2-3 группы',
+                oi2: 'КПН 0%',
+                oi2d: 'Полное освобождение',
+                oi3: 'НДС 0%',
+                oi3d: 'Освобождение от НДС',
+                oi4: 'Приоритет',
+                oi4d: '+ квота 50%',
+                returnTitle: '💰 Возврат инвестиций — <span class="highlight">QazIndustry</span>',
+                returnDesc: 'Постфинансирование до 40% затрат',
+                ret1: 'Компенсация до 40%',
+                ret1a: '• <strong>До 40%</strong> на оборудование',
+                ret1b: '• <strong>До 50%</strong> на сертификацию',
+                ret1c: '• <strong>Лимит 60 млн тг</strong> в год',
+                ret1d: '• Глубина <strong>до 24 месяцев</strong>',
+                ret1b: 'Постфинансирование',
+                ret2: 'Условия получения',
+                ret2a: '• <strong>Реестр</strong> отечественных производителей',
+                ret2b: '• Отсутствие <strong>налоговой задолженности</strong>',
+                ret2c: '• Рост <strong>налоговых отчислений</strong> за 3 года',
+                ret2d: '• <strong>Удвоение дохода</strong> от суммы поддержки',
+                ret2b: 'Требуется соблюдение',
+                retScheme: '📌 Схема работы:',
+                retSchemeD: '<strong>1.</strong> Оплата оборудования → <strong>2.</strong> Ввод в эксплуатацию → <strong>3.</strong> Заявка в QazIndustry → <strong>4.</strong> Возмещение до 40%',
+                prodTitle: 'Продуктовая <span class="highlight">линейка</span>',
+                prodDesc: 'Код ТН ВЭД 9619 00 890 9',
+                prod1: '📦 Продукт',
+                prod1a: '• <strong>Тип:</strong> Анатомический',
+                prod1b: '• <strong>Размеры:</strong> L, XL',
+                prod1c: '• <strong>Абсорбция:</strong> до 10 капель',
+                prod1d: '• <strong>SAP:</strong> 28–30 г, 35%',
+                prod1e: '• <strong>Регистрация:</strong> МИ класс 1',
+                prod2: '⚙️ Производственная линия',
+                prod2a: '• <strong>Скорость:</strong> 220–250 шт/мин',
+                prod2b: '• <strong>Мощность:</strong> 2 205 000 шт/мес',
+                prod2c: '• <strong>КПД:</strong> 85%, брак ≤ 2%',
+                prod2d: '• <strong>Стоимость:</strong> ~748 млн тг',
+                prod2e: '• <strong>Монтаж:</strong> 4–6 недель',
+                mapTitle: '📍 Расположение <span class="highlight">производства</span>',
+                mapDesc: 'СЭЗ «Alatau» — Алматинская область',
+                contactTitle: '📄 Получите доступ к <span style="color:#d97706;">Data Room</span>',
+                contactDesc: 'Финансовая модель, договор СЭЗ, спецификация, резюме команды.',
+                labelName: 'Ваше имя',
+                labelCompany: 'Компания',
+                labelPhone: 'Телефон (WhatsApp)',
+                labelMessage: 'Сообщение',
+                labelAgree: 'Я согласен с политикой конфиденциальности',
+                btnWhatsApp: '💬 Отправить в WhatsApp',
+                footer1: 'Юридический адрес',
+                footer1d: 'СЭЗ «Alatau», Алматинская область',
+                footer2: 'Документы',
+                footer2a: 'Закон РК «О СЭЗ»',
+                footer2b: 'Правила QazIndustry',
+                footer3: 'Команда',
+                footer3d: 'Ахмет Сауле — руководитель<br />Субботин А. — гл. инженер',
+                footerCopy: '⚡ Инвестиционный проект — Производство подгузников для взрослых | СЭЗ «Alatau»'
+            },
+            kz: {
+                heroBadge: '📋 «Alatau» АЭА резиденті мәртебесіне өтінім берілді',
+                heroTitle: 'Ересектерге арналған <br /> жаялықтар <span>«Alatau» АЭА-да</span>',
+                heroDesc: '<strong>Қазақстандағы алғашқы</strong> ересектерге арналған жаялықтар өндірушісі. Жоба <strong>импортты алмастыру</strong> міндетін шешеді.<br /><br />Қазақстан <strong>осындай өнімнің 100%</strong> импорттайды — ішкі өндіріс жоқ. Біз <strong>«Alatau» АЭА</strong> аумағында 0% салықтық преференциялармен өндіріс құрамыз.<br /><br />Команда — фармацевтика мен GMP-өндірісте <strong>17+ жыл</strong> тәжірибесі бар сарапшылар. <strong style="color:#fbbf24;">Іске қосуға 100% дайындық.</strong>',
+                f1Title: 'АЭА',
+                f1Sub: 'КПН 0% · ҚҚС 0%',
+                f1Label: '10 жыл жеңілдік',
+                f2Title: '60%',
+                f2Sub: 'МҮГЕДЕКТЕР',
+                f2Label: '2-3 топ',
+                f3Title: '40% ДЕЙІН',
+                f3Sub: 'ҚАЙТАРУ',
+                f3Label: 'QazIndustry',
+                stat1: 'IRR',
+                stat2: 'ай өтелу',
+                stat3: 'млрд тг CAPEX',
+                stat4: 'млн дана/ай',
+                btnMaterials: '📄 Материалдар алу',
+                btnPdf: '📥 PDF',
+                btnTeam: '👥 Команда',
+                btnWhatsAppHeader: '💬 WhatsApp',
+                teamTitle: '👥 Жобаның <span class="highlight">командасы</span>',
+                teamDesc: 'ҚР үздік мамандары. <strong style="color:#16a34a;">100% дайын!</strong>',
+                role1: '🚀 Бастамашы және жетекші',
+                desc1: '<strong>17+ жыл</strong> фармацевтикада. GMP, QC/QA цифрландыру.',
+                ready1: '✅ Дайын',
+                role2: '⚙️ Бас инженер',
+                desc2: '<strong>25+ жыл</strong> өнеркәсіпте. «Химфарм», GMP іске қосу.',
+                ready2: '✅ Дайын',
+                spec1: 'Сапаны бақылау',
+                spec1d: 'ISO 13485, GMP, валидация',
+                spec1b: '✅ Штатта',
+                spec2: 'Стандарттау',
+                spec2d: 'МИ тіркеу, ЕАЭО',
+                spec2b: '✅ Штатта',
+                spec3: 'SAP-технология',
+                spec3d: 'Суперабсорбенттер',
+                spec3b: '✅ Штатта',
+                spec4: 'Логистика',
+                spec4d: 'Импорт, тендерлер',
+                spec4b: '✅ Штатта',
+                readyBig: '🚀 <strong>ДАЙЫНДЫҚ 100%</strong> — команда толық жиналды!',
+                sezTitle: '🏛️ «Alatau» АЭА — <span class="highlight">салықтық преференциялар</span>',
+                sezDesc: 'КПН 0%, ҚҚС 0%, Жер 0%, Мүлік 0% — 10 жылға',
+                sez1: 'КПН 0%',
+                sez1d: 'Пайдадан ~20% үнемдеу',
+                sez2: 'ҚҚС 0%',
+                sez2d: 'Жабдық әкелу + өткізу',
+                sez3: 'Жер салығы 0%',
+                sez3d: 'Келісімшарт мерзіміне',
+                sez4: 'Мүлік салығы 0%',
+                sez4d: 'Өндірістік активтер',
+                sapTitle: '🧪 <span class="highlight">SAP</span> технологиясы',
+                sapDesc: 'SAP 35% оңтайлы арақатынас',
+                sap1t: '❌ 1-нұсқа',
+                sap1a: 'SAP бетінде',
+                sap1c: '⚠️ БІТЕЛУ',
+                sap1d: 'Құрғақ өзек',
+                sap1e: '❌ Тиімсіз',
+                sap1b: 'ТИІМСІЗ',
+                sap2t: '🔶 2-нұсқа',
+                sap2a: 'Целлюлоза 80%',
+                sap2b: 'SAP 20%',
+                sap2c: 'Целлюлоза 80%',
+                sap2e: '⚠️ Төмен сіңіргіштік',
+                sap2b: 'ОРТАША',
+                sap3t: '✅ 3-нұсқа — БІЗДІК',
+                sap3b: '🌟 SAP 35% + Целлюлоза 65%',
+                sap3c: '✅ БІРКЕЛКІ',
+                sap3d: '💧 МАКСИМАЛДЫ',
+                sap3e: '✅ Ауыр инконтиненцияға оңтайлы',
+                sap3b: '✅ ОҢТАЙЛЫ',
+                sapNote: '📌 <strong>Артықшылығымыз:</strong> SAP 35% біркелкі тарату. <strong>Максималды сіңіру</strong> және ағуды болдырмау.',
+                oiTitle: '♿ <span style="color:#fbbf24;">Мүгедектер ұйымының</span> мәртебесі',
+                oiDesc: 'Қызметкерлердің 60% 2-3 топ мүгедектігі бар',
+                oi1: '60%',
+                oi1d: '2-3 топ қызметкерлер',
+                oi2: 'КПН 0%',
+                oi2d: 'Толық босату',
+                oi3: 'ҚҚС 0%',
+                oi3d: 'ҚҚС-тан босату',
+                oi4: 'Басымдық',
+                oi4d: '+ 50% квота',
+                returnTitle: '💰 Инвестицияларды қайтару — <span class="highlight">QazIndustry</span>',
+                returnDesc: 'Шығындардың 40% дейін постфинансирование',
+                ret1: '40% дейін өтемақы',
+                ret1a: '• <strong>40% дейін</strong> жабдыққа',
+                ret1b: '• <strong>50% дейін</strong> сертификаттауға',
+                ret1c: '• <strong>Шек 60 млн тг</strong> жылына',
+                ret1d: '• Тереңдік <strong>24 айға дейін</strong>',
+                ret1b: 'Постфинансирование',
+                ret2: 'Алу шарттары',
+                ret2a: '• Отандық өндірушілер <strong>Тізілімі</strong>',
+                ret2b: '• <strong>Салық берешегі</strong> жоқ',
+                ret2c: '• <strong>Салық түсімдерінің</strong> 3 жылдағы өсімі',
+                ret2d: '• Қолдау сомасынан <strong>табысты екі еселеу</strong>',
+                ret2b: 'Сақтау талап етіледі',
+                retScheme: '📌 Жұмыс схемасы:',
+                retSchemeD: '<strong>1.</strong> Жабдықты төлеу → <strong>2.</strong> Пайдалануға беру → <strong>3.</strong> QazIndustry-ға өтінім → <strong>4.</strong> 40% дейін өтеу',
+                prodTitle: 'Өнім <span class="highlight">желісі</span>',
+                prodDesc: 'ТН ВЭД коды 9619 00 890 9',
+                prod1: '📦 Өнім',
+                prod1a: '• <strong>Түрі:</strong> Анатомиялық',
+                prod1b: '• <strong>Өлшемдері:</strong> L, XL',
+                prod1c: '• <strong>Сіңіргіштігі:</strong> 10 тамшыға дейін',
+                prod1d: '• <strong>SAP:</strong> 28–30 г, 35%',
+                prod1e: '• <strong>Тіркеу:</strong> МИ 1-сынып',
+                prod2: '⚙️ Өндірістік желі',
+                prod2a: '• <strong>Жылдамдық:</strong> 220–250 дана/мин',
+                prod2b: '• <strong>Қуат:</strong> 2 205 000 дана/ай',
+                prod2c: '• <strong>ПӘК:</strong> 85%, ақау ≤ 2%',
+                prod2d: '• <strong>Құны:</strong> ~748 млн тг',
+                prod2e: '• <strong>Монтаж:</strong> 4–6 апта',
+                mapTitle: '📍 Өндірістің <span class="highlight">орналасқан жері</span>',
+                mapDesc: '«Alatau» АЭА — Алматы облысы',
+                contactTitle: '📄 <span style="color:#d97706;">Data Room</span> қол жеткізіңіз',
+                contactDesc: 'Қаржылық модель, АЭА келісімшарты, сипаттама, команда резюмесі.',
+                labelName: 'Атыңыз',
+                labelCompany: 'Компания',
+                labelPhone: 'Телефон (WhatsApp)',
+                labelMessage: 'Хабарлама',
+                labelAgree: 'Құпиялылық саясатымен келісемін',
+                btnWhatsApp: '💬 WhatsApp арқылы жіберу',
+                footer1: 'Заңды мекенжайы',
+                footer1d: '«Alatau» АЭА, Алматы облысы',
+                footer2: 'Құжаттар',
+                footer2a: 'ҚР «АЭА туралы» Заңы',
+                footer2b: 'QazIndustry ережелері',
+                footer3: 'Команда',
+                footer3d: 'Ахмет Сауле — жетекші<br />Субботин А. — бас инженер',
+                footerCopy: '⚡ Инвестициялық жоба — Ересектерге арналған жаялықтар | «Alatau» АЭА'
+            },
+            en: {
+                heroBadge: '📋 SEZ «Alatau» resident status application submitted',
+                heroTitle: 'Adult Diaper <br /> Production <span>in SEZ «Alatau»</span>',
+                heroDesc: '<strong>The first in Kazakhstan</strong> manufacturer of adult diapers with full quality control cycle. The project solves the task of <strong>import substitution</strong> in the segment of medical products for bedridden patients.<br /><br />Kazakhstan <strong>imports 100%</strong> of such products — there is no domestic production. We are creating production on the territory of <strong>SEZ «Alatau»</strong> with 0% tax preferences.<br /><br />The team — <strong>experts with 17+ years</strong> of experience in pharmaceuticals and GMP production. <strong style="color:#fbbf24;">100% ready to launch.</strong>',
+                f1Title: 'SEZ',
+                f1Sub: 'CIT 0% · VAT 0%',
+                f1Label: '10 years benefits',
+                f2Title: '60%',
+                f2Sub: 'DISABLED',
+                f2Label: 'Group 2-3',
+                f3Title: 'UP TO 40%',
+                f3Sub: 'RETURN',
+                f3Label: 'QazIndustry',
+                stat1: 'IRR',
+                stat2: 'months payback',
+                stat3: 'billion KZT CAPEX',
+                stat4: 'mln pcs/month',
+                btnMaterials: '📄 Get materials',
+                btnPdf: '📥 PDF',
+                btnTeam: '👥 Team',
+                btnWhatsAppHeader: '💬 WhatsApp',
+                teamTitle: '👥 Project <span class="highlight">team</span>',
+                teamDesc: 'Top specialists of Kazakhstan. <strong style="color:#16a34a;">100% ready!</strong>',
+                role1: '🚀 Project initiator & leader',
+                desc1: '<strong>17+ years</strong> in pharma. GMP, QC/QA digitalization.',
+                ready1: '✅ Ready',
+                role2: '⚙️ Chief Engineer',
+                desc2: '<strong>25+ years</strong> in industry. «Khimpharm», GMP launch.',
+                ready2: '✅ Ready',
+                spec1: 'Quality Control',
+                spec1d: 'ISO 13485, GMP, validation',
+                spec1b: '✅ In staff',
+                spec2: 'Standardization',
+                spec2d: 'MI registration, EAEU',
+                spec2b: '✅ In staff',
+                spec3: 'SAP Technology',
+                spec3d: 'Superabsorbents, optimization',
+                spec3b: '✅ In staff',
+                spec4: 'Logistics',
+                spec4d: 'Import, tenders',
+                spec4b: '✅ In staff',
+                readyBig: '🚀 <strong>100% READY</strong> — team is fully staffed!',
+                sezTitle: '🏛️ SEZ «Alatau» — <span class="highlight">tax preferences</span>',
+                sezDesc: 'CIT 0%, VAT 0%, Land 0%, Property 0% — for 10 years',
+                sez1: 'CIT 0%',
+                sez1d: 'Savings ~20% of profit',
+                sez2: 'VAT 0%',
+                sez2d: 'Equipment import + sales',
+                sez3: 'Land tax 0%',
+                sez3d: 'For contract period',
+                sez4: 'Property tax 0%',
+                sez4d: 'Production assets',
+                sapTitle: '🧪 <span class="highlight">SAP</span> Technology',
+                sapDesc: 'Optimal SAP ratio 35%',
+                sap1t: '❌ Option 1',
+                sap1a: 'SAP on surface',
+                sap1c: '⚠️ BLOCKING',
+                sap1d: 'Dry core',
+                sap1e: '❌ Ineffective',
+                sap1b: 'INEFFECTIVE',
+                sap2t: '🔶 Option 2',
+                sap2a: 'Cellulose 80%',
+                sap2b: 'SAP 20%',
+                sap2c: 'Cellulose 80%',
+                sap2e: '⚠️ Low absorption',
+                sap2b: 'MEDIUM',
+                sap3t: '✅ Option 3 — OURS',
+                sap3b: '🌟 SAP 35% + Cellulose 65%',
+                sap3c: '✅ UNIFORM',
+                sap3d: '💧 MAXIMUM',
+                sap3e: '✅ Optimal for severe incontinence',
+                sap3b: '✅ OPTIMAL',
+                sapNote: '📌 <strong>Our advantage:</strong> SAP 35% with uniform distribution. <strong>Maximum absorption</strong> and prevents leakage.',
+                oiTitle: '♿ <span style="color:#fbbf24;">Disabled organization</span> status',
+                oiDesc: '60% employees with disability group 2-3',
+                oi1: '60%',
+                oi1d: 'Employees group 2-3',
+                oi2: 'CIT 0%',
+                oi2d: 'Full exemption',
+                oi3: 'VAT 0%',
+                oi3d: 'VAT exemption',
+                oi4: 'Priority',
+                oi4d: '+ 50% quota',
+                returnTitle: '💰 Investment return — <span class="highlight">QazIndustry</span>',
+                returnDesc: 'Post-financing up to 40% of costs',
+                ret1: 'Compensation up to 40%',
+                ret1a: '• <strong>Up to 40%</strong> for equipment',
+                ret1b: '• <strong>Up to 50%</strong> for certification',
+                ret1c: '• <strong>Limit 60 million KZT</strong> per year',
+                ret1d: '• Depth <strong>up to 24 months</strong>',
+                ret1b: 'Post-financing',
+                ret2: 'Conditions',
+                ret2a: '• <strong>Register</strong> of domestic producers',
+                ret2b: '• No <strong>tax arrears</strong>',
+                ret2c: '• Growth of <strong>tax contributions</strong> over 3 years',
+                ret2d: '• <strong>Doubling of income</strong> from support',
+                ret2b: 'Compliance required',
+                retScheme: '📌 Workflow:',
+                retSchemeD: '<strong>1.</strong> Equipment payment → <strong>2.</strong> Commissioning → <strong>3.</strong> Application to QazIndustry → <strong>4.</strong> Reimbursement up to 40%',
+                prodTitle: 'Product <span class="highlight">line</span>',
+                prodDesc: 'HS Code 9619 00 890 9',
+                prod1: '📦 Product',
+                prod1a: '• <strong>Type:</strong> Anatomical',
+                prod1b: '• <strong>Sizes:</strong> L, XL',
+                prod1c: '• <strong>Absorption:</strong> up to 10 drops',
+                prod1d: '• <strong>SAP:</strong> 28–30 g, 35%',
+                prod1e: '• <strong>Registration:</strong> MD class 1',
+                prod2: '⚙️ Production line',
+                prod2a: '• <strong>Speed:</strong> 220–250 pcs/min',
+                prod2b: '• <strong>Capacity:</strong> 2,205,000 pcs/month',
+                prod2c: '• <strong>Efficiency:</strong> 85%, defect ≤ 2%',
+                prod2d: '• <strong>Cost:</strong> ~748 million KZT',
+                prod2e: '• <strong>Installation:</strong> 4–6 weeks',
+                mapTitle: '📍 Production <span class="highlight">location</span>',
+                mapDesc: 'SEZ «Alatau» — Almaty region',
+                contactTitle: '📄 Get access to <span style="color:#d97706;">Data Room</span>',
+                contactDesc: 'Financial model, SEZ agreement, specifications, team CVs.',
+                labelName: 'Your name',
+                labelCompany: 'Company',
+                labelPhone: 'Phone (WhatsApp)',
+                labelMessage: 'Message',
+                labelAgree: 'I agree to privacy policy',
+                btnWhatsApp: '💬 Send via WhatsApp',
+                footer1: 'Legal address',
+                footer1d: 'SEZ «Alatau», Almaty region',
+                footer2: 'Documents',
+                footer2a: 'Law of RK «On SEZ»',
+                footer2b: 'QazIndustry Rules',
+                footer3: 'Team',
+                footer3d: 'Akhmetsaule — Leader<br />Subbotin A. — Chief Engineer',
+                footerCopy: '⚡ Investment project — Adult Diaper Production | SEZ «Alatau»'
+            }
+        };
+
+        // ==========================================
+        // ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА
+        // ==========================================
+        let currentLang = 'ru';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            if (!t) return;
+
+            Object.keys(t).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) {
+                    el.innerHTML = t[key];
+                }
+            });
+
+            document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
+            document.querySelector(`.lang-switch a[data-lang="${lang}"]`)?.classList.add('active');
+
+            showToast(`🌐 ${lang === 'ru' ? 'Русский' : lang === 'kz' ? 'Қазақша' : 'English'}`, 'success');
+        }
+
+        // ==========================================
+        // WHATSAPP
         // ==========================================
         function openWhatsApp() {
             const YOUR_WHATSAPP = '77777717707';
             const text = 'Здравствуйте! Меня интересует инвестиционный проект "Подгузники для взрослых СЭЗ Alatau". Хочу получить инвестиционные материалы.';
-            window.open(`https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
-            showToast('✅ Переход в WhatsApp!', 'success');
+            const url = `https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            showToast('✅ Открыт WhatsApp!', 'success');
         }
 
-        // ==========================================
-        // WHATSAPP (ФОРМА)
-        // ==========================================
         function sendToWhatsApp(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
@@ -974,8 +1389,9 @@
             const YOUR_WHATSAPP = '77777717707';
             const text = `Здравствуйте! Меня интересует инвестиционный проект "Подгузники для взрослых СЭЗ Alatau".%0A%0A👤 Имя: ${name}%0A🏢 Компания: ${company || 'Не указана'}%0A📞 Телефон: ${phone}%0A💬 ${message || 'Хочу получить доступ к Data Room'}`;
 
-            window.open(`https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
-            showToast('✅ Переход в WhatsApp!', 'success');
+            const url = `https://wa.me/${YOUR_WHATSAPP}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            showToast('✅ Открыт WhatsApp!', 'success');
             document.getElementById('investorForm').reset();
         }
 
@@ -1029,43 +1445,47 @@
         // КАРТА
         // ==========================================
         document.addEventListener('DOMContentLoaded', function() {
-            const map = L.map('map').setView([43.6345, 76.8270], 13);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap'
-            }).addTo(map);
+            setTimeout(function() {
+                try {
+                    if (typeof L !== 'undefined') {
+                        const map = L.map('map').setView([43.6345, 76.8270], 13);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; OpenStreetMap'
+                        }).addTo(map);
 
-            const customIcon = L.divIcon({
-                html: '<div style="background:#dc2626;color:#fff;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:18px;border:3px solid #fbbf24;">🏭</div>',
-                iconSize: [32, 32],
-                iconAnchor: [16, 32]
-            });
+                        const customIcon = L.divIcon({
+                            html: '<div style="background:#dc2626;color:#fff;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:18px;border:3px solid #fbbf24;box-shadow:0 4px 15px rgba(220,38,38,0.4);">🏭</div>',
+                            className: '',
+                            iconSize: [32, 32],
+                            iconAnchor: [16, 32]
+                        });
 
-            L.marker([43.6345, 76.8270], { icon: customIcon })
-                .addTo(map)
-                .bindPopup('🏭 СЭЗ «Alatau» — планируемый участок');
+                        L.marker([43.6345, 76.8270], { icon: customIcon })
+                            .addTo(map)
+                            .bindPopup('🏭 СЭЗ «Alatau» — планируемый участок');
 
-            L.circle([43.6345, 76.8270], {
-                color: '#fbbf24',
-                fillColor: '#fbbf24',
-                fillOpacity: 0.1,
-                radius: 1000
-            }).addTo(map);
+                        L.circle([43.6345, 76.8270], {
+                            color: '#fbbf24',
+                            fillColor: '#fbbf24',
+                            fillOpacity: 0.1,
+                            radius: 1000
+                        }).addTo(map);
 
-            setTimeout(() => map.invalidateSize(), 500);
+                        setTimeout(() => map.invalidateSize(), 500);
+                        console.log('✅ Карта загружена!');
+                    } else {
+                        console.log('❌ Leaflet не загружен');
+                    }
+                } catch(e) {
+                    console.log('❌ Ошибка карты:', e);
+                }
+            }, 1000);
         });
 
-        // ==========================================
-        // ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА (УПРОЩЕННЫЙ)
-        // ==========================================
-        function switchLanguage(lang) {
-            document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
-            document.querySelector(`.lang-switch a[data-lang="${lang}"]`)?.classList.add('active');
-            showToast(`🌐 ${lang === 'ru' ? 'Русский' : lang === 'kz' ? 'Қазақша' : 'English'}`, 'success');
-        }
-
         console.log('✅ Сайт полностью работает!');
-        console.log('📌 WhatsApp: 77777717707');
-        console.log('📌 Google Analytics: G-HS4ZJE68XG');
+        console.log('📌 Google Analytics ID: G-MM0KR7C2SD');
+        console.log('📌 WhatsApp номер: 77777717707');
+        console.log('📌 Переключение языков работает: русский, қазақша, english');
     </script>
 </body>
 </html>
